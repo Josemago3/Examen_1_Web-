@@ -3,3 +3,100 @@
     padding: 0;
     font-family: 'Open Sans', sans-serif;
 }
+
+body{
+    background-color: #EA9D4F;
+}
+
+.contenedor{
+    width: 98%;
+    max-width: 1300px;
+    margin: 5px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header header header"
+                         "sidebar contenido contenido"
+                         "sidebar footer footer";
+}
+
+.contenedor > div,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+	background: #e9e9e9;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.contenedor .header{
+    grid-area: header;
+    margin:0 auto;
+    width: 100%;
+    height: 300px;
+    background-image: url("imagenes/pizza.jpg") ;
+    background-position: -390 -520;
+    background-repeat: no-repeat;
+    opacity: .7;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+ 
+h1{
+    font-family: 'Ballet', cursive;
+    color: white;
+    text-align: center;
+    font-size: 150px;
+}
+
+.contenedor .contenido{
+    grid-area: contenido;
+}
+
+.contenedor .sidebar{
+    grid-area: sidebar;
+    text-align: center;
+}
+     
+.contenedor .footer{
+    float: left;
+    background-color: #ffffff;
+    text-align: center;
+    grid-area: footer;
+}
+
+/*#663315 color cafe 
+ #EAA177 color carne
+ 
+ #664F41
+ #EA9D4F
+
+
+
+ <canvas id="fondo_Header" width="100%">
+            </canvas>
+            <script>
+                var c = document.getElementById("fondo_Header");
+                var ctx = c.getContext("2d");
+                var img = new Image();
+                img.src = "imagenes/bar.jpg"
+                img.onload = function(){
+                    c.width = img.width;
+                    ctx.drawImage(img, 0, 0);
+                }
+            </script>
+
+
+            position: left;
+    z-index: 50;
+
+    position: left;
+    z-index: 100;
+
+
+
+ */
