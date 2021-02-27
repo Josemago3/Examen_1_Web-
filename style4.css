@@ -1,7 +1,6 @@
 
 .menu {
     position: relative;
-    /*background: #cd3e3d;*/
     background: #ac310f;
     width: 3em;
     height: 3em;
@@ -115,30 +114,30 @@
     transform: rotate(-90deg);
     position: absolute;
     left: -1.2em;
-    top: -4.2em;
+    top: -3em;
 }
 .menu li:nth-of-type(2) {
     transform: rotate(-45deg);
     position: absolute;
     left: 2em;
-    top: -3em;
+    top: -2em;
 }
 .menu li:nth-of-type(3) {
     position: absolute;
     left: 3.4em;
-    top: 0.3em;
+    top: 1.3em;
 }
 .menu li:nth-of-type(4) {
     transform: rotate(45deg);
     position: absolute;
     left: 2em;
-    top: 3.7em;
+    top: 4.7em;
 }
 .menu li:nth-of-type(5) {
     transform: rotate(90deg);
     position: absolute;
     left: -1.2em;
-    top: 5em;
+    top: 6em;
 }
 .hint {
     text-align: center;

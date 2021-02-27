@@ -7,7 +7,7 @@
 body{
     background-color: #EA9D4F;
 }
-
+/* Empieza css de grid*/
 .contenedor{
     width: 98%;
     max-width: 1300px;
@@ -15,7 +15,7 @@ body{
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
     grid-template-areas: "header header header header header"
                          "sidebar contenido contenido contenido contenido"
                          "footer footer footer footer footer";
@@ -30,16 +30,33 @@ body{
 	border-radius: 10px;
 }
 
+@media(max-width: 768px){
+    .contenedor {
+		grid-template-areas:
+                        "header header header header header" 
+                        "sidebar sidebar sidebar sidebar sidebar"
+						"contenido contenido contenido contenido contenido"
+                        "footer footer footer footer footer";
+	}
+    .contenedor .header{
+        margin:0 auto;
+    width: 100%;
+    height: 300px;
+    }
+}
+/* Empieza css de grid*/
+/* Empieza css de header*/
 .contenedor .header{
     grid-area: header;
     margin:0 auto;
+    max-width: 100%;
     width: 100%;
     height: 300px;
     background-image: url("imagenes/pizza.jpg") ;
     background-position: -390 -520;
     background-repeat: no-repeat;
     opacity: .7;
-    display: flex;
+    display: block;
     justify-content: center;
     align-content: center;
     flex-direction: column;
@@ -52,38 +69,80 @@ h1{
     text-align: center;
     font-size: 150px;
 }
-
+/* Termina css de header*/
+/* Empieza css de contenido*/
 .contenedor .contenido{
     grid-area: contenido;
+    background: #37413f;
 }
 
+table{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: auto;
+    background-color:#37413f;
+    text-align: center;
+    width:100%;
+	border-radius: 10px;
+}
+
+th, td{
+    padding: 10px;
+}
+
+
+
+.comida{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.cantidad{
+    border: 0;
+    border-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #37413f;
+    text-align: center;
+    border-radius: 10px;
+    padding: 7.5px;
+}
+/* Termina css de contenido*/
+/* Empieza css de sidebar*/
 .contenedor .sidebar{
     grid-area: sidebar;
     text-align: center;
     background-color: #EA9D4F;/*side bar igual fondo*/
 }
-     
+/* Empieza css de sidebar*/
+/* Empieza css de footer*/     
 .contenedor .footer{
     float: left;
     background: transparent;
     text-align: right;
     grid-area: footer;
     background-color: #414f5e;
-    width: 96%;
     background: #37413f;
     opacity: .95;
 }
 
-p .foot{
+.foot{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
-    text-align: center;
-    font-size: 30px;
+    text-align: right;
+    font-size: 15px;
+    padding: 10px;
 }
 
 .sBorde{
     border: 0;
     background: transparent;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 15px;
 }
 
 button{
@@ -95,6 +154,7 @@ button{
     border-radius: 10px;
 	padding: 5px;
 }
+/* Termina css de footer*/
 
 /*#663315 color cafe 
  #EAA177 color carne
