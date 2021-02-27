@@ -14,18 +14,18 @@ body{
     margin: 5px auto;
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, auto);
-    grid-template-areas: "header header header"
-                         "sidebar contenido contenido"
-                         "sidebar footer footer";
+    grid-template-areas: "header header header header header"
+                         "sidebar contenido contenido contenido contenido"
+                         "footer footer footer footer footer";
 }
 
 .contenedor > div,
 .contenedor .contenido,
 .contenedor .sidebar,
 .contenedor .footer {
-	background: #e9e9e9;
+	background: white;
 	padding: 20px;
 	border-radius: 10px;
 }
@@ -60,13 +60,40 @@ h1{
 .contenedor .sidebar{
     grid-area: sidebar;
     text-align: center;
+    background-color: #EA9D4F;/*side bar igual fondo*/
 }
      
 .contenedor .footer{
     float: left;
-    background-color: #ffffff;
-    text-align: center;
+    background: transparent;
+    text-align: right;
     grid-area: footer;
+    background-color: #414f5e;
+    width: 96%;
+    background: #37413f;
+    opacity: .95;
+}
+
+p .foot{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+.sBorde{
+    border: 0;
+    background: transparent;
+}
+
+button{
+    background-color: #EA9D4F;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 10px;
+	padding: 5px;
 }
 
 /*#663315 color cafe 

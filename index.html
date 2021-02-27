@@ -1,37 +1,84 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Ortega Ariel and Olvera Jose">
-    <meta name="description" content="Examen de la materia desarrollo de aplicaciones web">
-    <meta name="keywords" content="html,desarrollo web">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina de examen</title>
-    <!--documentos externos-->
-    <link rel="icon" href="imagenes//cocina.png">
-    <link rel="stylesheet"  href="file_index.css">
-    <script src="https://kit.fontawesome.com/2dea6f6f6c.js" crossorigin="anonymous"></script>
-    <link rel = "preconnect" href = "https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Ballet&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="contenedor">
-        <header class="header">
-            <h1>Restaurante</h1>
-        </header>
-        <main class="contenido">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Ortega Ariel and Olvera Jose">
+        <meta name="description" content="Examen de la materia desarrollo de aplicaciones web">
+        <meta name="keywords" content="html,desarrollo web">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pagina de examen</title>
+        <!--documentos externos-->
+        <link rel="icon" href="imagenes//cocina.png">
+        <link rel="stylesheet"  href="file_index.css">
+        <script src="https://kit.fontawesome.com/2dea6f6f6c.js" crossorigin="anonymous"></script>
+        <link rel = "preconnect" href = "https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ballet&display=swap" rel="stylesheet">
+        <!--menu boton-->
+        <link rel="stylesheet" href="style4.css">
+        <link href='ionicons.min.css' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="contenedor">
+            <header class="header">
+                <h1>Restaurante</h1>
 
-        </main>
-        <aside class="sidebar">
-            <nav class="menu">
+            </header>
+            <main class="contenido">
+                <div class="bebidas">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Descripción</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                            </tr>
+                        </thead>
+        
+                        <tbody>
+                            <tr>
+                                <td><p id="producto1"></p></td>
+                                <td><p id="descripción1"></p></td>
+                                <td><p id="precio1"></p></td>
+                                <td><input type ="text" id="T1" size="15" maxlength="15" value = "" readonly/></td>
+                            </tr>
+        
+                            <tr>
+                                <td><p id="producto2"></p></td>
+                                <td><p id="descripción2"></p></td>
+                                <td><p id="precio2"></p></td>
+                                <td><input type ="text" id="T2" size="15" maxlength="15" value = "" readonly/></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><p id="producto3"></p></td>
+                                <td><p id="descripción3"></p></td>
+                                <td><p id="precio3"></p></td>
+                                <td><input type ="text" id="T3" size="15" maxlength="15" value = "" readonly/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+            <aside class="sidebar">
+                <nav class="menu">
+                    <ul>
+                        <li><a onclick="mostrarBebidas()">Bebidas</a></li>
+                        <li><a href="#platillos">Platillos</a></li>
+                        <li><a href="#postres">Postres</a></li>
+                        <li><a href="#editar">Editar</a></li>
+                        <li><a href="#salir">Salir</a></li>
+                    </ul>
+                </nav>
                 
-            </nav>
-        </aside>
-        <footer class="footer">
-
-        </footer>
-    </div>
-</body>
+            </aside>
+            <footer class="footer">
+                <p class="foot">Total: $<input class="sBorde" type ="text" id="T3" size="15" maxlength="15" value = "" readonly disabled/></p>
+                <button  onclick="return comprar(comprar);">Comprar</button>
+            </footer>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
