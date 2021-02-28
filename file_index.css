@@ -188,11 +188,11 @@ button{
     width: 17%;
 }
 .contenido #contenido__img{
-    width: 60%;
-    opacity: .4;
+    width: 80%;
     display:block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 25px;
 }
 /* Termina css de footer*/
 /*Empieza el diseño responsivo para moviles*/

@@ -12,24 +12,25 @@ var comida= [{nombre: "Coca-Cola", descripcion : "Bebida sabor cola de 300ml", p
 var ventas=0;
 
 function mostrarBebidas() {
-    var j=1;
+    var j=0;
     ocultarImagen();
     document.getElementById("comida").style.display = "none";
     document.getElementById("postre").style.display = "none";
     document.getElementById("editar").style.display = "none";
     document.getElementById("bebidas").style.display = "block";
-    
+    limpiar("bebida",3,"none");
     for(i=0;i<comida.length;i++){
         if(comida[i].tipo=="Bebida"){
-            var producto= "bproducto"+(j);
-            var descripcion= "bdescripción"+(j);
-            var precio= "bprecio"+(j);
+            var producto= "bproducto"+(j+1);
+            var descripcion= "bdescripción"+(j+1);
+            var precio= "bprecio"+(j+1);
             document.getElementById(producto).innerHTML = comida[i].nombre;
             document.getElementById(descripcion).innerHTML = comida[i].descripcion;
             document.getElementById(precio).innerHTML = comida[i].precio;
             j++;
         }
     }
+    limpiar("bebida",j,"block");
 }
 
 function mostrarComida() {
@@ -39,7 +40,7 @@ function mostrarComida() {
     document.getElementById("postre").style.display = "none";
     document.getElementById("editar").style.display = "none";
     document.getElementById("comida").style.display = "block";
-
+    limpiar("comida",4,"none");
     for(i=0;i<comida.length;i++){
         if(comida[i].tipo=="Platillo"){
             var producto= "Pproducto"+(j+1);
@@ -51,6 +52,7 @@ function mostrarComida() {
             j++;
         }
     }
+    limpiar("comida",j,"block");
 }
 
 function mostrarPost() {
@@ -60,7 +62,7 @@ function mostrarPost() {
     document.getElementById("comida").style.display = "none";
     document.getElementById("editar").style.display = "none";
     document.getElementById("postre").style.display = "block";
-
+    limpiar("postre",3,"none");
     for(i=0;i<comida.length;i++){
         if(comida[i].tipo=="Postre"){
             var producto= "oproducto"+(j+1);
@@ -72,6 +74,15 @@ function mostrarPost() {
             j++;
         }
     }
+    limpiar("postre",j,"block");
+}
+
+function limpiar(pro, tam, most){
+    for(k=0;k<tam;k++){
+        var producto= pro+(k+1);
+        console.log(document.getElementById(producto).style.display = most);
+        document.getElementById(producto).style.display = most;
+    }
 }
 
 function editar(){
@@ -81,33 +92,167 @@ function editar(){
     document.getElementById("comida").style.display = "none";
     document.getElementById("postre").style.display = "none";
     document.getElementById("editar").style.display = "block";
-
+    limpiar("editar",10,"none");
     for(i=0;i<comida.length;i++){
         var producto= "producto"+(i+1);
         var descripcion= "descripción"+(i+1);
         var precio= "precio"+(i+1);
         var tipo= "tipo"+(i+1);
         document.getElementById(producto).innerHTML = comida[i].nombre;
+
         document.getElementById(descripcion).innerHTML = comida[i].descripcion;
         document.getElementById(precio).innerHTML = comida[i].precio;
         document.getElementById(tipo).innerHTML = comida[i].tipo;
     }
-
+    limpiar("editar",comida.length,"block");
     //Agregar
     //document.getElementById("Agregar");
     //Eliminar
 }
 
 function agregar(){
+    var repetido;
+    var nom = document.getElementById("productoI").value;
+    var des = document.getElementById("descripciónI").value;
+    var pre = document.getElementById("precioI").value;
+    var tip = document.getElementById("tipoI").value;
+    if(des.length==0){
+        des = "Sin descripción"
+    }
+    if(pre==0){
+        pre = 20;
+    }
+    if(tip=="Bebida"){
+        repetido = comida.filter(comida => comida.tipo === "Bebida").length;
+        if(repetido+1 > 3){
+            alert("Arreglo de bebidas lleno, no se puede agregar el elemento");
+        }
+        else{
+            var comi ={  nombre: nom,
+                descripcion: des,
+                precio: pre,
+                tipo: tip
+            };
+            comida.push(comi);
+        }
+    }
+    if(tip=="Platillo"){
+        repetido = comida.filter(comida => comida.tipo === "Platillo").length;
+        if(repetido+1 > 4){
+            alert("Arreglo de platillos lleno, no se puede agregar el elemento");
+        }
+        else{
+            var comi ={  nombre: nom,
+                descripcion: des,
+                precio: pre,
+                tipo: tip
+            };
+            comida.push(comi);
+        }
+    }
+    if(tip=="Postre"){
+        repetido = comida.filter(comida => comida.tipo === "Postre").length;
+        if(repetido+1 > 3){
+            alert("Arreglo de platillos lleno, no se puede agregar el elemento");
+        }
+        else{
+            var comi ={  nombre: nom,
+                descripcion: des,
+                precio: pre,
+                tipo: tip
+            };
+            comida.push(comi);
+        }
+    }
 
+    editar();            
 }
 
 function edit(){
-    carros.filter(carro => carro.color === "rojo");
+    var bendera=0;
+    var repetido;
+    var nombre = document.getElementById("productoE").value;
+    var des = document.getElementById("descripciónE").value;
+    var pre = document.getElementById("precioE").value;
+    var tip = document.getElementById("tipoE").value;
+    if(des.length==0){
+        des = "Sin descripción"
+    }
+    if(pre==0){
+        pre = 20;
+    }
+    console.log(des, pre, tip);
+    console.log(comida.length);
+    for(i=0;i<comida.length;i++){
+        console.log(i);
+        console.log(tip, nombre);
+        console.log(comida[i].nombre,i);
+        if(comida[i].nombre==nombre){
+            console.log(tip, nombre,comida[i].tipo,i);
+            if(tip=="Bebida"){
+                repetido = comida.filter(comida => comida.tipo === "Bebida").length;
+                if(comida[i].tipo!="Bebida" && repetido+1 > 3){
+                    alert("Arreglo de bebidas lleno, no se puede agregar el elemento");
+                }
+                else{
+                    comida[i].descripcion = des;
+                    comida[i].precio = pre;
+                    comida[i].tipo = tip;
+                    bandera = 1;
+                }
+            }
+            if(tip=="Platillo"){
+                repetido = comida.filter(comida => comida.tipo === "Platillo").length;
+                if(comida[i].tipo!="Platillo" && repetido+1 > 4){
+                    alert("Arreglo de platillos lleno, no se puede agregar el elemento");
+                }
+                else{
+                    comida[i].descripcion = des;
+                    comida[i].precio = pre;
+                    comida[i].tipo = tip;
+                    bandera = 1;
+                }
+            }
+            if(tip=="Postre"){
+                repetido = comida.filter(comida => comida.tipo === "Postre").length;
+                if(comida[i].tipo!="Postre" && repetido+1 > 3){
+                    alert("Arreglo de platillos lleno, no se puede agregar el elemento");
+                }
+                else{
+                    comida[i].descripcion = des;
+                    comida[i].precio = pre;
+                    comida[i].tipo = tip;
+                    bandera = 1;
+                }
+            }
+        }
+    }
+    if(bandera == 0){
+        alert("¡Elemento no encontrado!");
+    }
+    editar();
 }
 
-function eliminar(){
+function eliminar(){    
+    var nombre = document.getElementById("productoO").value;
+    for(i=0;i<comida.length;i++){
+        if(comida[i].nombre==nombre){
+            var eliminado= comida.splice(i,1);
+            comida.splice(i,1);
+            console.log(eliminado, i,comida);
+        }
+    }
+    editar();
+}
 
+function TipoR(tipo){
+    var repetido=0;
+    for(i=0;i<comida.length;i++){
+        if(comida[i].tipo==tipo){
+            repetido++;
+        }
+    }
+    return repetido;
 }
 
 function suma(){
