@@ -164,12 +164,12 @@ button{
     float: left;
     width: 17%;
 }
-.contenido .contenido__img{
-    width: 50%;
+.contenido #contenido__img{
+    width: 60%;
     opacity: .4;
     display:block;
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 /* Termina css de footer*/
 /*Empieza el diseño responsivo para moviles*/

@@ -12,7 +12,7 @@ var comida= [{nombre: "Coca-Cola", descripcion : "Bebida sabor cola de 300ml", p
 
 function mostrarBebidas() {
     var j=1;
-
+    ocultarImagen();
     document.getElementById("comida").style.display = "none";
     document.getElementById("postre").style.display = "none";
     document.getElementById("bebidas").style.display = "block";
@@ -32,7 +32,7 @@ function mostrarBebidas() {
 
 function mostrarComida() {
     var j=0;
-
+    ocultarImagen();
     document.getElementById("bebidas").style.display = "none";
     document.getElementById("postre").style.display = "none";
     document.getElementById("comida").style.display = "block";
@@ -52,7 +52,7 @@ function mostrarComida() {
 
 function mostrarPost() {
     var j=0;
-
+    ocultarImagen();
     document.getElementById("bebidas").style.display = "none";
     document.getElementById("comida").style.display = "none";
     document.getElementById("postre").style.display = "block";
@@ -67,6 +67,15 @@ function mostrarPost() {
             document.getElementById(precio).innerHTML = comida[i].precio;
             j++;
         }
+    }
+}
+
+function ocultarImagen(){
+    var x = document.getElementById("contenido__img");
+    if (x.style.display === "none") {
+        /*x.style.display = "block";*/
+    } else {
+        x.style.display = "none";
     }
 }
 
