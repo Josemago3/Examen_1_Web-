@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+    font-size: 12pt;
 }
 
 body{
@@ -9,9 +10,9 @@ body{
 }
 /* Empieza css de grid*/
 .contenedor{
-    width: 98%;
+    width: 100%;
     max-width: 1300px;
-    margin: 5px auto;
+    margin: 0px auto;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(5, 1fr);
@@ -30,20 +31,6 @@ body{
 	border-radius: 10px;
 }
 
-@media(max-width: 768px){
-    .contenedor {
-		grid-template-areas:
-                        "header header header header header" 
-                        "sidebar sidebar sidebar sidebar sidebar"
-						"contenido contenido contenido contenido contenido"
-                        "footer footer footer footer footer";
-	}
-    .contenedor .header{
-        margin:0 auto;
-    width: 100%;
-    height: 300px;
-    }
-}
 /* Empieza css de grid*/
 /* Empieza css de header*/
 .contenedor .header{
@@ -60,20 +47,21 @@ body{
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
 }
  
 h1{
     font-family: 'Ballet', cursive;
     color: white;
     text-align: center;
-    font-size: 150px;
+    font-size: 10rem;
 }
 /* Termina css de header*/
 /* Empieza css de contenido*/
 .contenedor .contenido{
     grid-area: contenido;
     background: #37413f;
+    margin-right: 15px;
 }
 
 table{
@@ -126,6 +114,7 @@ th, td{
     background-color: #414f5e;
     background: #37413f;
     opacity: .95;
+    
 }
 
 .foot{
@@ -154,36 +143,78 @@ button{
     border-radius: 10px;
 	padding: 5px;
 }
+
+.sidebar .sidebar__img{
+    padding-top: 5px;
+    border-radius: 10px;
+}
+.sidebar .sidebar__h5{
+    text-align: left;
+}
 /* Termina css de footer*/
+/*Empieza el diseño responsivo para moviles*/
+@media(max-width: 768px){
+    .contenedor {
+		grid-template-areas:
+                        "header header header header header" 
+                        "sidebar sidebar sidebar sidebar sidebar"
+						"contenido contenido contenido contenido contenido"
+                        "footer footer footer footer footer";
+	}
+    .contenedor .header{
+        box-sizing: border-box;
+        margin:0 auto;
+        width: 100%;
+        height: 300px;
+    }
+    h1{
+        font-size: 4rem;
+    }
 
-/*#663315 color cafe 
- #EAA177 color carne
- 
- #664F41
- #EA9D4F
+    .contenedor .header{
+        height: 130px;
+    }
+    .sidebar .sidebar__img{
+        width: 50%;
+    }
+    .sidebar .sidebar__h5{
+        text-align: center; 
+    }
+    .contenedor .contenido{
+        margin-left: 10px;
+    }
+}
 
 
 
- <canvas id="fondo_Header" width="100%">
-            </canvas>
-            <script>
-                var c = document.getElementById("fondo_Header");
-                var ctx = c.getContext("2d");
-                var img = new Image();
-                img.src = "imagenes/bar.jpg"
-                img.onload = function(){
-                    c.width = img.width;
-                    ctx.drawImage(img, 0, 0);
-                }
-            </script>
+/*
+.sidebar .sidebar__img{
+        width: 40%;
+        margin-top: 5px;
+        position: absolute;
+        top: 380px;
+        left: 323px;
+    }
+    .sidebar .sidebar__h5{
+        text-align: right;
+        padding-right: 20px;
+    }
+    .sidebar .menu{
+        margin-left: 15px;
+    }
+    h1{
+        font-size: 5em;
+    }
 
-
-            position: left;
-    z-index: 50;
-
-    position: left;
-    z-index: 100;
-
-
-
- */
+    .contenedor .header{
+        height: 130px;
+    }
+    .sidebar .sidebar__img{
+        width: 40%;
+        margin-top: 5px;
+        display: inline;
+    }
+@media(max-width: 660px){
+    
+}
+*/
