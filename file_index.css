@@ -104,6 +104,14 @@ th, td{
     text-align: center;
     background-color: #EA9D4F;/*side bar igual fondo*/
 }
+.recomendacion{
+    background: #37413f;
+    padding: 10px;
+    border-radius: 10px;
+}
+h5{
+    color: white;
+}
 /* Empieza css de sidebar*/
 /* Empieza css de footer*/     
 .contenedor .footer{
@@ -151,6 +159,11 @@ button{
 .sidebar .sidebar__h5{
     text-align: left;
 }
+
+.footer .footer__audio{
+    float: left;
+    width: 17%;
+}
 /* Termina css de footer*/
 /*Empieza el diseño responsivo para moviles*/
 @media(max-width: 768px){
@@ -183,6 +196,10 @@ button{
     .contenedor .contenido{
         margin-left: 10px;
         padding: 0px;
+    }
+    .footer .footer__audio{
+        float: left;
+        width: 45%;
     }
 }
 
