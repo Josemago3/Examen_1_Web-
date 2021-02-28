@@ -104,13 +104,36 @@ th, td{
     text-align: center;
     background-color: #EA9D4F;/*side bar igual fondo*/
 }
+
 .recomendacion{
     background: #37413f;
     padding: 10px;
     border-radius: 10px;
 }
+
 h5{
     color: white;
+}
+
+.Edit{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.Bedit{
+    background-color: #EA9D4F;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 10px;
+	padding: 5px;
+}
+
+.Nedit{
+    display: none;
+    padding: 10px;
 }
 /* Empieza css de sidebar*/
 /* Empieza css de footer*/     
@@ -207,6 +230,39 @@ button{
     .footer .footer__audio{
         float: left;
         width: 45%;
+    }
+    .Edit{
+        padding: 0px;
+        padding-bottom: 10px;
+    }
+    table {
+        width:100%;
+    }
+    thead {
+        display: none;
+    }
+    tr:nth-of-type(2n) {
+        background-color: inherit;
+    }
+    tr td:first-child {
+        font-weight:bold;
+        font-size:1.3em;
+    }
+    tbody td {
+        display: block;
+        text-align:center;
+    }
+    tbody td:before {
+        content: attr(data-th);
+        display: block;
+        text-align:center;
+    }
+    .Nedit{
+        display: block;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        text-align: center;
+        font-size: 15px;
     }
 }
 

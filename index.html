@@ -10,7 +10,7 @@
         <!--documentos externos-->
         <link rel="icon" href="imagenes//cocina.png">
         <link rel="stylesheet"  href="file_index.css">
-        <script src="https://kit.fontawesome.com/2dea6f6f6c.js" crossorigin="anonymous"></script>
+        <!--<script src="https://kit.fontawesome.com/2dea6f6f6c.js" crossorigin="anonymous"></script>-->
         <link rel = "preconnect" href = "https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -26,7 +26,7 @@
 
             </header>
             <main class="contenido">
-                <img id="contenido__img" src="imagenes/logo_restaurante.jpg" alt="logo del Restaurante">
+                <img id="contenido__img" src="imagenes/Hola mundo Blanco.png" alt="logo del Restaurante">
                 <div id="bebidas" style="display:none;">
                     <table>
                         <thead>
@@ -43,21 +43,21 @@
                                 <td><p class="Comida" id="bproducto1"></p></td>
                                 <td><p class="Comida" id="bdescripción1"></p></td>
                                 <td><p class="Comida" id="bprecio1"></p></td>
-                                <td><input class="cantidad" id="bT1" type="number" id="tentacles" name="tentacles" value="0" min="0" max="10"/></td>
+                                <td><input class="cantidad" id="bT1" onclick="suma()" type="number" value="0" min="0" max="10"/></td>
                             </tr>
         
                             <tr>
                                 <td><p class="Comida" id="bproducto2"></p></td>
                                 <td><p class="Comida" id="bdescripción2"></p></td>
                                 <td><p class="Comida" id="bprecio2"></p></td>
-                                <td><input class="cantidad" id="bT2" type="number" id="tentacles" name="tentacles" value="0" min="0" max="10"/></td>
+                                <td><input class="cantidad" id="bT2" onclick="suma()" type="number" value="0" min="0" max="10"/></td>
                             </tr>
                             
                             <tr>
                                 <td><p class="Comida" id="bproducto3"></p></td>
                                 <td><p class="Comida" id="bdescripción3"></p></td>
                                 <td><p class="Comida" id="bprecio3"></p></td>
-                                <td><input class="cantidad" id="bT3" type="number" id="tentacles" name="tentacles" value="0" min="0" max="10"/></td>
+                                <td><input class="cantidad" id="bT3" onclick="suma()" type="number" value="0" min="0" max="10"/></td>
                             </tr>
                         </tbody>
                     </table>
@@ -79,28 +79,28 @@
                                 <td><p class="Comida" id="Pproducto1"></p></td>
                                 <td><p class="Comida" id="Pdescripción1"></p></td>
                                 <td><p class="Comida" id="Pprecio1"></p></td>
-                                <td><input class="cantidad" id="PT1" type="number" id="tentacles" name="tentacles" value="0" min="0" max="10"/></td>
+                                <td><input class="cantidad" id="PT1" onclick="suma()" type="number" value="0" min="0" max="10"/></td>
                             </tr>
         
                             <tr>
                                 <td><p class="Comida" id="Pproducto2"></p></td>
                                 <td><p class="Comida" id="Pdescripción2"></p></td>
                                 <td><p class="Comida" id="Pprecio2"></p></td>
-                                <td><input class="cantidad" id="PT2" type="number" id="tentacles" name="tentacles" value="0" min="0" max="10"/></td>
+                                <td><input class="cantidad" id="PT2" onclick="suma()" type="number" value="0" min="0" max="10"/></td>
                             </tr>
                             
                             <tr>
                                 <td><p class="Comida" id="Pproducto3"></p></td>
                                 <td><p class="Comida" id="Pdescripción3"></p></td>
                                 <td><p class="Comida" id="Pprecio3"></p></td>
-                                <td><input class="cantidad" id="PT3" type="number" id="tentacles" name="tentacles" value="0" min="0" max="10"/></td>
+                                <td><input class="cantidad" id="PT3" onclick="suma()" type="number" value="0" min="0" max="10"/></td>
                             </tr>
 
                             <tr>
                                 <td><p class="Comida" id="Pproducto4"></p></td>
                                 <td><p class="Comida" id="Pdescripción4"></p></td>
                                 <td><p class="Comida" id="Pprecio4"></p></td>
-                                <td><input class="cantidad" id="PT4" type="number" id="tentacles" name="tentacles" value="0" min="0" max="10"/></td>
+                                <td><input class="cantidad" id="PT4" onclick="suma()" type="number" value="0" min="0" max="10"/></td>
                             </tr>
                         </tbody>
                     </table>
@@ -122,24 +122,174 @@
                                 <td><p class="Comida" id="oproducto1"></p></td>
                                 <td><p class="Comida" id="odescripción1"></p></td>
                                 <td><p class="Comida" id="oprecio1"></p></td>
-                                <td><input class="cantidad" id="oT1" type="number" id="tentacles" name="tentacles" value="0"  min="0" max="10"/></td>
+                                <td><input class="cantidad" id="oT1" onclick="suma()" type="number" value="0"  min="0" max="10"/></td>
                             </tr>
                 
                             <tr>
                                 <td><p class="Comida" id="oproducto2"></p></td>
                                 <td><p class="Comida" id="odescripción2"></p></td>
                                 <td><p class="Comida" id="oprecio2"></p></td>
-                                <td><input class="cantidad" id="oT2" type="number" id="tentacles" name="tentacles" value="0"  min="0" max="10"/></td>
+                                <td><input class="cantidad" id="oT2" onclick="suma()" type="number" value="0"  min="0" max="10"/></td>
                             </tr>
                             
                             <tr>
                                 <td><p class="Comida" id="oproducto3"></p></td>
                                 <td><p class="Comida" id="odescripción3"></p></td>
                                 <td><p class="Comida" id="oprecio3"></p></td>
-                                <td><input class="cantidad" id="oT3" type="number" id="tentacles" name="tentacles" value="0" min="0" max="10"/></td>
+                                <td><input class="cantidad" id="oT3" onclick="suma()" type="number" value="0" min="0" max="10"/></td>
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                
+                <div id="editar" style="display:none;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="Comida" >Producto</th>
+                                <th class="Comida" >Descripción</th>
+                                <th class="Comida" >Precio</th>
+                                <th class="Comida" >Tipo</th>
+                            </tr>
+                        </thead>
+                
+                        <tbody>
+                            <tr>
+                                <td><p class="Comida" id="producto1"></p></td>
+                                <td><p class="Comida" id="descripción1"></p></td>
+                                <td><p class="Comida" id="precio1"></p></td>
+                                <td><p class="Comida" id="tipo1"></p></td>
+                            </tr>
+                
+                            <tr>
+                                <td><p class="Comida" id="producto2"></p></td>
+                                <td><p class="Comida" id="descripción2"></p></td>
+                                <td><p class="Comida" id="precio2"></p></td>
+                                <td><p class="Comida" id="tipo2"></p></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><p class="Comida" id="producto3"></p></td>
+                                <td><p class="Comida" id="descripción3"></p></td>
+                                <td><p class="Comida" id="precio3"></p></td>
+                                <td><p class="Comida" id="tipo3"></p></td>
+                            </tr>
+
+                            <tr>
+                                <td><p class="Comida" id="producto4"></p></td>
+                                <td><p class="Comida" id="descripción4"></p></td>
+                                <td><p class="Comida" id="precio4"></p></td>
+                                <td><p class="Comida" id="tipo4"></p></td>
+                            </tr>
+
+                            <tr>
+                                <td><p class="Comida" id="producto5"></p></td>
+                                <td><p class="Comida" id="descripción5"></p></td>
+                                <td><p class="Comida" id="precio5"></p></td>
+                                <td><p class="Comida" id="tipo5"></p></td>
+                            </tr>
+
+                            <tr>
+                                <td><p class="Comida" id="producto6"></p></td>
+                                <td><p class="Comida" id="descripción6"></p></td>
+                                <td><p class="Comida" id="precio6"></p></td>
+                                <td><p class="Comida" id="tipo6"></p></td>
+                            </tr>
+
+                            <tr>
+                                <td><p class="Comida" id="producto7"></p></td>
+                                <td><p class="Comida" id="descripción7"></p></td>
+                                <td><p class="Comida" id="precio7"></p></td>
+                                <td><p class="Comida" id="tipo7"></p></td>
+                            </tr>
+
+                            <tr>
+                                <td><p class="Comida" id="producto8"></p></td>
+                                <td><p class="Comida" id="descripción8"></p></td>
+                                <td><p class="Comida" id="precio8"></p></td>
+                                <td><p class="Comida" id="tipo8"></p></td>
+                            </tr>
+
+                            <tr>
+                                <td><p class="Comida" id="producto9"></p></td>
+                                <td><p class="Comida" id="descripción9"></p></td>
+                                <td><p class="Comida" id="precio9"></p></td>
+                                <td><p class="Comida" id="tipo9"></p></td>
+                            </tr>
+
+                            <tr>
+                                <td><p class="Comida" id="producto10"></p></td>
+                                <td><p class="Comida" id="descripción10"></p></td>
+                                <td><p class="Comida" id="precio10"></p></td>
+                                <td><p class="Comida" id="tipo10"></p></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <div class="Edit">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="Comida" >Producto</th>
+                                    <th class="Comida" >Descripción</th>
+                                    <th class="Comida" >Precio</th>
+                                    <th class="Comida" >Tipo</th>
+                                </tr>
+                            </thead>
+
+                            <tbody> 
+                                <tr>
+                                    <td><p class="Nedit">Nombre</p><input class="sBorde" id="productoI" type="text" size="17" maxlength="30" value = "" placeholder="Ingrese el nombre"></td>
+                                    <td><p class="Nedit">Descripción</p><input class="sBorde" id="descripciónI" type="text" size="25" maxlength="60" value = "" placeholder="Ingrese la descripción"></td>
+                                    <td><p class="Nedit">Precio</p><input class="sBorde" id="precioI" type="number" value="0" min="0" max="500"></td>
+                                    <td><p class="Nedit">Tipo</p><input class="sBorde" id="tipoI" type="text" size="10" maxlength="7" value = "" placeholder="Tipo"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="Bedit" onclick="return comprar(comprar);">Insertar</button>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="Comida" >Producto</th>
+                                    <th class="Comida" >Descripción</th>
+                                    <th class="Comida" >Precio</th>
+                                    <th class="Comida" >Tipo</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>        
+                                <tr>
+                                    <td><p class="Nedit">Nombre</p><input class="sBorde" id="productoE" type="text" size="17" maxlength="30" value = "" placeholder="Ingrese el nombre"></td>
+                                    <td><p class="Nedit">Descripción</p><input class="sBorde" id="descripciónE" type="text" size="25" maxlength="60" value = "" placeholder="Ingrese la descripción"></td>
+                                    <td><p class="Nedit">Precio</p><input class="sBorde" id="precioE" type="number" value="0" min="0" max="500"></p></td>
+                                    <td><p class="Nedit">Tipo</p><input class="sBorde" id="tipoE" type="text" size="10" maxlength="7" value = "" placeholder="Tipo"></td>
+                                </tr>
+                            </tbody>
+                        </table>    
+                        <button class="Bedit" onclick="return comprar(comprar);">Editar</button>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="Comida" >Producto</th>
+                                    <th class="Comida" >Descripción</th>
+                                    <th class="Comida" >Precio</th>
+                                    <th class="Comida" >Tipo</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td><p class="Nedit">Nombre</p><input class="sBorde" id="productoO" type="text" size="17" maxlength="30" value = "" placeholder="Ingrese el nombre"></td>
+                                    <td><p class="Nedit">Descripción</p><input class="sBorde" id="descripciónO" type="text" size="25" maxlength="60" value = "" placeholder="Ingrese la descripción"></td>
+                                    <td><p class="Nedit">Precio</p><input class="sBorde" id="precioO" type="number" value="0" min="0" max="500"></p></td>
+                                    <td><p class="Nedit">Tipo</p><input class="sBorde" id="tipoO" type="text" size="10" maxlength="7" value = "" placeholder="Tipo"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="Bedit" onclick="return comprar(comprar);">Eliminar</button>
+                    </div>
                 </div>
             </main>
             <aside class="sidebar">
@@ -148,8 +298,8 @@
                         <li><a onclick="mostrarBebidas()">Bebidas</a></li>
                         <li><a onclick="mostrarComida()">Platillos</a></li>
                         <li><a onclick="mostrarPost()">Postres</a></li>
-                        <li><a href="#editar">Editar</a></li>
-                        <li><a href="#salir">Salir</a></li>
+                        <li><a onclick="editar()">Editar</a></li>
+                        <li><a onclick="salir()">Salir</a></li>
                     </ul>
                 </nav>
                 <div class="recomendacion">
@@ -159,7 +309,7 @@
             </aside>
             <footer class="footer">
                 <audio  class="footer__audio" autoplay src="musica/Macroform_-_Simplicity.mp3" controls></audio>
-                <p class="foot">Total: $<input class="sBorde" type ="text" id="T3" size="15" maxlength="15" value = "A" readonly disabled/></p>
+                <p class="foot">Total: $<input class="sBorde" type ="number" id="Total" maxlength="15" value = "0.00" readonly disabled/></p>
                 <button  onclick="return comprar(comprar);">Comprar</button>
             </footer>
         </div>
