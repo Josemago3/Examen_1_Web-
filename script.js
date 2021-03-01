@@ -30,7 +30,7 @@ function mostrarBebidas() {
             j++;
         }
     }
-    limpiar("bebida",j,"block");
+    limpiar("bebida",j,"table-row");
 }
 
 function mostrarComida() {
@@ -52,7 +52,7 @@ function mostrarComida() {
             j++;
         }
     }
-    limpiar("comida",j,"block");
+    limpiar("comida",j,"table-row");
 }
 
 function mostrarPost() {
@@ -74,7 +74,7 @@ function mostrarPost() {
             j++;
         }
     }
-    limpiar("postre",j,"block");
+    limpiar("postre",j,"table-row");
 }
 
 function limpiar(pro, tam, most){
@@ -104,7 +104,7 @@ function editar(){
         document.getElementById(precio).innerHTML = comida[i].precio;
         document.getElementById(tipo).innerHTML = comida[i].tipo;
     }
-    limpiar("editar",comida.length,"block");
+    limpiar("editar",comida.length,"table-row");
     //Agregar
     //document.getElementById("Agregar");
     //Eliminar
